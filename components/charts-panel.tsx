@@ -65,8 +65,8 @@ export function ChartsPanel() {
           <CardTitle className="font-heading">Candidaturas por Día</CardTitle>
         </CardHeader>
         <CardContent>
-          <ChartContainer config={chartConfig} className="h-64 w-full">
-            <ResponsiveContainer width="100%" height="100%">
+          <ChartContainer config={chartConfig} >
+            <ResponsiveContainer>
               <LineChart data={dailyApplicationsData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <XAxis dataKey="date" tickFormatter={formatDate} fontSize={12} tickLine={false} axisLine={false} />
                 <YAxis fontSize={12} tickLine={false} axisLine={false} />
@@ -94,8 +94,8 @@ export function ChartsPanel() {
           <CardTitle className="font-heading">Distribución por Estado</CardTitle>
         </CardHeader>
         <CardContent>
-          <ChartContainer config={chartConfig} className="h-64 w-full">
-            <ResponsiveContainer width="100%" height="100%">
+          <ChartContainer config={chartConfig} className="">
+            <ResponsiveContainer>
               <PieChart>
                 <Pie
                   data={statusData}
@@ -139,7 +139,7 @@ export function ChartsPanel() {
         </CardHeader>
         <CardContent>
           <ChartContainer config={chartConfig} className="h-64 w-full">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer>
               <BarChart data={dailyApplicationsData.slice(-7)} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                 <XAxis dataKey="date" tickFormatter={formatDate} fontSize={12} tickLine={false} axisLine={false} />
                 <YAxis fontSize={12} tickLine={false} axisLine={false} />

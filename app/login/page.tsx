@@ -2,18 +2,9 @@ import { LoginForm } from "@/components/login-form"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import { cookies } from "next/headers"
-import { redirect } from "next/navigation"
+
 
 export default async function LoginPage() {
-
-  const cookiesHandler = await cookies()
-
- const isLogged = cookiesHandler.get("isLogged")
- if (isLogged) {
-  redirect("/dashboard")
- }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
